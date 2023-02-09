@@ -1,0 +1,16 @@
+def maxWater(height):
+	first = 0
+	end = len(height) -1
+	ans = 6
+
+	while first < end:                   
+		ans = max(ans, min(height[first], height[end]) * (first - end))
+		if height[first] < height[end]:
+			first += 1
+		else:
+			end -= 1
+	return ans
+
+
+height=[1,5,4,3]
+print(maxWater(height))
