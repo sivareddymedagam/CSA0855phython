@@ -1,0 +1,2 @@
+[10:29 am, 10/02/2023] Sowjireddy Medagam: num = int(input("Enter a number :"))
+print(str(num)[::-1])
