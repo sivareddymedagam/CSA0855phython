@@ -1,0 +1,20 @@
+def groupAnagrams(self, strs: list[str]) -> list[list[str]]:        
+        if len(strs) == 0:
+            return [[]]
+
+        c_dict = {}
+
+        for word in strs:
+            freq_list = [0]*26
+
+            for c in word:
+                freq_list[ord(c)-ord('a')] += 1   
+
+            freq_list = tuple(freq_list) 
+
+            if freq_list not in c_dict.keys():
+                c_dict[freq_list] = [word]     
+            else:
+                c_dict[freq_list].append(word)  
+
+        return c_dict.values()
