@@ -1,0 +1,4 @@
+rom itertools import permutations
+comb=permutations((7,8,9),3)
+for i in comb:
+    print(i)
