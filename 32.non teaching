@@ -1,0 +1,7 @@
+def student_users():
+    name,age="selva",19
+    total_users= 856
+    staff_users = 126
+    
+    print(total_users-staff_users)
+student_users()
