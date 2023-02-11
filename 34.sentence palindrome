@@ -1,0 +1,32 @@
+def sentencePalindrome(s):
+	l, h = 0, len(s) - 1
+
+	# Lowercase string
+	s = s.lower()
+
+	
+	while (l <= h):
+
+		
+		if (not(s[l] >= 'a' and s[l] <= 'z')):
+			l += 1
+
+		
+		if (not(s[h] >= 'a' and s[h] <= 'z')):
+			h -= 1
+
+		
+		if (s[l] == s[h]):
+			l += 1
+			h -= 1
+		
+		
+		else:
+			return False
+	
+	return True
+s = "Too hot to hoot."
+if (sentencePalindrome(s)):
+	print ("true")
+else:
+	print ("false")
